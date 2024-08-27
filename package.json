@@ -1,0 +1,41 @@
+{
+  "name": "isomorphic-xxhash",
+  "description": "Isomorphic wrapper for xxhash-wasm and xxhashjs",
+  "version": "1.0.0",
+  "main": "./cjs/index.cjs",
+  "types": "./types/index.d.ts",
+  "unpkg": "./browser/isomorphic-xxhash.min.js",
+  "browser": {
+    "browser-or-node": "./shims/browser-or-node.cjs",
+    "xxhashjs": "./shims/noop.cjs",
+    "cuint": "./shims/noop.cjs"
+  },
+  "scripts": {
+    "prepare": "rollup -c"
+  },
+  "keywords": [
+    "hash",
+    "xxhash",
+    "wasm",
+    "browser"
+  ],
+  "author": "WasabiThumb",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WasabiThumb/isomorphic-xxhash.git"
+  },
+  "license": "Apache-2.0",
+  "dependencies": {
+    "browser-or-node": "^3.0.0",
+    "cuint": "^0.2.2",
+    "xxhash-wasm": "^1.0.2",
+    "xxhashjs": "^0.2.2"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^26.0.1",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@types/xxhashjs": "^0.2.4",
+    "rollup": "^4.21.1"
+  }
+}
